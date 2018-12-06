@@ -1,0 +1,106 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Travel</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<link href="/selectstyle.css" rel="stylesheet">
+<script src="/selectstyle.js"></script>
+<link rel="stylesheet" href="/bootstrap.min.css" media="screen" />
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css"
+	rel="stylesheet" type="text/css">
+<script src="travel.js"></script>
+</head>
+<body>
+
+	<div style="display: inline">
+		<table style="margin-top: 100px; margin-left: 150px">
+			<tr>
+				<td>Origin</td>
+				<td id="origin"><select theme="light" width="400"
+					placeholder="Select Origin" data-search="true">
+						<option th:each="location: ${locations}">
+							<p th:text="${ location.description }"></p>
+						</option>
+				</select> <input type="hidden" name="checkyear" id="checkyear" value="">
+				</td>
+			</tr>
+			<tr>
+				<td>Destination</td>
+				<td id="destination"><select theme="light" width="400"
+					placeholder="Select Destination" data-search="true">
+						<option th:each="location: ${locations}">
+							<p th:text="${ location.description }"></p>
+						</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>
+					<p>Sort By</p>
+					<div>
+						<a href="/location?sortBy=code">Location Code</a> Or <a
+							href="/location?sortBy=name">Location Name</a>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+
+				<td><br />
+				<br />
+				<input style="height: 45px; width: 90px;" type="submit"
+					value="Submit" class="btn btn-default" id="btn_submit" /> <input
+					margin-left: 100px"
+			value="Application Statistics"
+					class="btn btn-default" id="link_trace" /></td>
+			</tr>
+		</table>
+	</div>
+
+
+
+	<div id="result"
+		style="display: none; margin-left: 200px; margin-top: 50px">
+
+		<table class="table table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Travel Fare</th>
+					<th scope="col">Currency</th>
+					<th scope="col">Origin</th>
+					<th scope="col">Destination</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+	<div id="resultTrace"
+		style="display: none; margin-left: 110px; margin-top: 50px">
+
+		<table class="table table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Total Number Of Request</th>
+					<th scope="col">Total Number Of 200 Request</th>
+					<th scope="col">Total Number Of 400 Request</th>
+					<th scope="col">Total Number Of 500 Request</th>
+					<th scope="col">Average Response Time Request</th>
+					<th scope="col">Min Response Time Request</th>
+					<th scope="col">Max Response Time Request</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+
+</body>
+</html>

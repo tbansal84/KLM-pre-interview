@@ -1,0 +1,43 @@
+{
+	"name": "http.server.requests",
+	"measurements": [
+		{
+			"statistic": "COUNT",
+			"value": 2.0
+		},
+		{
+			"statistic": "TOTAL_TIME",
+			"value": 8.137388432
+		},
+		{
+			"statistic": "MAX",
+			"value": 4.626602934
+		}
+	],
+	"availableTags": [
+		{
+			"tag": "exception",
+			"values": [
+				"None"
+			]
+		},
+		{
+			"tag": "method",
+			"values": [
+				"GET"
+			]
+		},
+		{
+			"tag": "uri",
+			"values": [
+				"/travel/plan/{origin}/{destination}"
+			]
+		},
+		{
+			"tag": "status",
+			"values": [
+				"200"
+			]
+		}
+	]
+}
